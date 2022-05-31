@@ -7,7 +7,6 @@ app.use(cors());
 
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const userRoute = require("./routes/user");
 const authRoute = require("./routes/auth");
 const taskRoute = require("./routes/task");
 const userTaskRoute = require("./routes/userTask");
@@ -26,7 +25,6 @@ mongoose
 app.use(express.json());
 
 app.use("/api/auth", authRoute);
-app.use("/api/user", userRoute);
 app.use("/api/task", taskRoute);
 app.use("/api/userTask", userTaskRoute);
 
